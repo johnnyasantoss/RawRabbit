@@ -47,7 +47,7 @@ public class CustomContext : IMessageContext
 Message contexts are provided to the messages by the registered `IMessageContextProvider`. The default implementation, `MessageContextProvider<TMessageContext>` can be used for most context (typically `POCO` classes).
 
 ### The Context Enhancer
-A recieved message passes through the registered `IContextEnhancer` before any message handler is invoked. The method `WireUpContextFeatures` is called with the current context, consumer and `BasicDeliverEventArgs` (from `RabbitMQ.Client`).
+A received message passes through the registered `IContextEnhancer` before any message handler is invoked. The method `WireUpContextFeatures` is called with the current context, consumer and `BasicDeliverEventArgs` (from `RabbitMQ.Client`).
 ```csharp
 public class CustomContextEnhancer : IContextEnhancer
 {
